@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sdf version="1.9">
+
+  <world name="default">
+
+    <!-- ================= PHYSICS ================= -->
+    <physics type="ode">
+      <max_step_size>0.004</max_step_size>
+      <real_time_factor>1.0</real_time_factor>
+      <real_time_update_rate>250</real_time_update_rate>
+    </physics>
+
+    <gravity>0 0 -9.8</gravity>
+
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+
+    <atmosphere type="adiabatic"/>
+
+    <!-- ================= SCENE ================= -->
+    <scene>
+      <grid>false</grid>
+      <ambient>0.4 0.4 0.4 1</ambient>
+      <background>0.7 0.7 0.7 1</background>
+      <shadows>true</shadows>
+    </scene>
+
+    <!-- ================= GROUND ================= -->
+    <model name="ground_plane">
+      <static>true</static>
+
+      <link name="link">
+
+        <collision name="collision">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>500 500</size>
+            </plane>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <plane>
+              <normal>0 0 1</normal>
+              <size>500 500</size>
+            </plane>
+          </geometry>
+
+          <material>
+            <ambient>0.8 0.8 0.8 1</ambient>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.2 0.2 0.2 1</specular>
+          </material>
+        </visual>
+
+      </link>
+    </model>
+
+    <!-- ================= SUN ================= -->
+    <light name="sun" type="directional">
+      <pose>0 0 100 0 0 0</pose>
+      <cast_shadows>true</cast_shadows>
+      <intensity>1.0</intensity>
+      <direction>0.3 0.4 -0.8</direction>
+    </light>
+
+
+    <!-- ================================================= -->
+    <!--                 TALL BUILDINGS                    -->
+    <!-- ================================================= -->
+
+    <!-- B1 -->
+    <model name="obstacle_building_01">
+      <static>true</static>
+      <pose>120 -105 12.5 0 0 0</pose>
+      <link name="link">
+
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>14 14 25</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>14 14 25</size>
+            </box>
+          </geometry>
+        </visual>
+
+      </link>
+    </model>
+
+
+    <!-- B2 -->
+    <model name="obstacle_building_02">
+      <static>true</static>
+      <pose>170 -80 17.5 0 0 0</pose>
+      <link name="link">
+
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>14 14 35</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>14 14 35</size>
+            </box>
+          </geometry>
+        </visual>
+
+      </link>
+    </model>
+
+
+    <!-- B3 -->
+    <model name="obstacle_building_03">
+      <static>true</static>
+      <pose>105 -55 10 0 0 0</pose>
+      <link name="link">
+
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>12 16 20</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>12 16 20</size>
+            </box>
+          </geometry>
+        </visual>
+
+      </link>
+    </model>
+
+
+    <!-- B4 -->
+    <model name="obstacle_building_04">
+      <static>true</static>
+      <pose>145 -35 15 0 0 0</pose>
+      <link name="link">
+
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>16 12 30</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>16 12 30</size>
+            </box>
+          </geometry>
+        </visual>
+
+      </link>
+    </model>
+
+
+    <!-- B5 -->
+    <model name="obstacle_building_05">
+      <static>true</static>
+      <pose>90 -5 20 0 0 0</pose>
+      <link name="link">
+
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>14 14 40</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>14 14 40</size>
+            </box>
+          </geometry>
+        </visual>
+
+      </link>
+    </model>
+
+
+    <!-- B6 -->
+    <model name="obstacle_building_06">
+      <static>true</static>
+      <pose>60 -75 12.5 0 0 0</pose>
+      <link name="link">
+
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>14 14 25</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>14 14 25</size>
+            </box>
+          </geometry>
+        </visual>
+
+      </link>
+    </model>
+
+
+    <!-- B7 -->
+    <model name="obstacle_building_07">
+      <static>true</static>
+      <pose>20 -105 17.5 0 0 0</pose>
+      <link name="link">
+
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>14 14 35</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>14 14 35</size>
+            </box>
+          </geometry>
+        </visual>
+
+      </link>
+    </model>
+
+
+    <!-- B8 -->
+    <model name="obstacle_building_08">
+      <static>true</static>
+      <pose>45 -145 10 0 0 0</pose>
+      <link name="link">
+
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>16 16 20</size>
+            </box>
+          </geometry>
+        </collision>
+
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>16 16 20</size>
+            </box>
+          </geometry>
+        </visual>
+
+      </link>
+    </model>
+
+
+    <!-- ================================================= -->
+    <!--                 WAYPOINT MARKERS                  -->
+    <!-- ================================================= -->
+
+    <!-- WP0 -->
+    <model name="waypoint_0">
+      <static>true</static>
+      <pose>73.96 -145 0.5 0 0 0</pose>
+      <link name="link">
+        <visual name="marker">
+          <geometry>
+            <cylinder>
+              <radius>1.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+
+    <!-- WP1 -->
+    <model name="waypoint_1">
+      <static>true</static>
+      <pose>155 -115 0.5 0 0 0</pose>
+      <link name="link">
+        <visual name="marker">
+          <geometry>
+            <cylinder>
+              <radius>1.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+
+    <!-- WP2 -->
+    <model name="waypoint_2">
+      <static>true</static>
+      <pose>135 -25 0.5 0 0 0</pose>
+      <link name="link">
+        <visual name="marker">
+          <geometry>
+            <cylinder>
+              <radius>1.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+
+    <!-- WP3 -->
+    <model name="waypoint_3">
+      <static>true</static>
+      <pose>45 -55 0.5 0 0 0</pose>
+      <link name="link">
+        <visual name="marker">
+          <geometry>
+            <cylinder>
+              <radius>1.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+
+    <!-- WP4 -->
+    <model name="waypoint_4">
+      <static>true</static>
+      <pose>25 -175 0.5 0 0 0</pose>
+      <link name="link">
+        <visual name="marker">
+          <geometry>
+            <cylinder>
+              <radius>1.2</radius>
+              <length>1</length>
+            </cylinder>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+
+
+    <!-- ================= GPS WORLD ================= -->
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <world_frame_orientation>ENU</world_frame_orientation>
+      <latitude_deg>47.3979710577</latitude_deg>
+      <longitude_deg>8.5461637398</longitude_deg>
+      <elevation>0</elevation>
+    </spherical_coordinates>
+
+  </world>
+
+</sdf>

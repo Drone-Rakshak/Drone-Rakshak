@@ -1,0 +1,14 @@
+# Flight Parameters
+
+TAKEOFF_ALTITUDE = 3.0
+
+DEFAULT_SPEED = 1.0
+
+DEFAULT_HOVER_TIME = 3
+
+YAW_SPEED = 30.0
+
+MOVE_TIME = 5
+
+LAND_WAIT = 10
+

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package format="3">
+
+  <name>drone_map_manager</name>
+
+  <version>0.1.0</version>
+
+  <description>
+    Generate location-specific Gazebo worlds from OpenStreetMap data for Drone Rakshak.
+  </description>
+
+  <maintainer email="drone-rakshak@example.com">Drone Rakshak</maintainer>
+
+  <license>MIT</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <exec_depend>python3</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+
+</package>
